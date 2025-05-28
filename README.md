@@ -1,5 +1,6 @@
 # CloudComputing_Lab1
 Creating a FastAPI Service that contains at minimum of 10 different routes with at least 1 simple route, query string route, and path route. <br />
+Routes all return information related to route description. <br />
 
 Route 1. /root_route: Simple route that returns "Hello World." <br />
 Route 2. /time: Simple route that returns the current local time when executed using a python time library. <br />
