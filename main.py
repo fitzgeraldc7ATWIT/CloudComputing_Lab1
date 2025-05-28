@@ -40,21 +40,26 @@ async def query(name: str, age: int, country: str):
     return f"Hello {name}, you are {age} years old, and live in {country}."
 
 
-# @app.get("/car")
-# async def car():
-#     return {"message": "Hello World"}
-#
-#
-# @app.get("/sports")
-# async def sports():
-#     return {"message": "Hello World"}
-#
-#
-# @app.get("/")
-# async def root():
-#     return {"message": "Hello World"}
-#
-#
-# @app.get("/")
-# async def root():
-#     return {"message": "Hello World"}
+class CarMakeModel(BaseModel):
+    make: str
+    model: int
+    year: int
+
+@app.get("/car")
+async def car(input: CarMakeModel):
+    return f"You have a {input.make} {input.model} from {input.year}."
+
+
+@app.get("/sports")
+async def sports(name: str):
+    return f"Your favorite sport is {name}."
+
+
+@app.get("/book")
+async def root(genre: str, book: str):
+    return f"Your favourite genre is {genre}, and favourite book in that genre is {book}."
+
+
+@app.get("/hometown")
+async def root(highschool: str, town: str):
+    return f"You went to {highschool} in {town}."
