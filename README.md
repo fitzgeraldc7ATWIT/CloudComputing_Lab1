@@ -13,7 +13,7 @@ Route 9. /book: Path route that takes input from the user for the user's favouri
 Route 10. /hometown: Path route that takes input from the user for the user's hometown and high school <br />
 
 
-How to run:
+How to run: <br />
 1.Download or clone the git repository. <br />
 2.Open the project with pycharm(or another text editor). <br />
 3.Install uvicorn and fastapi with pip. <br />
