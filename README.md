@@ -20,3 +20,4 @@ How to run: <br />
 4.In the terminal enter: uvicorn main:app --port 8080 --reload <br />
 5.Open your browser and go to: http://localhost:8080/docs to see all routes with fastapi <br />
 
+
