@@ -11,3 +11,12 @@ Route 7. /car: Post route that takes input from the user with 3 variables for th
 Route 8. /sports: Path route that takes input from the user for the users favourite sport <br />
 Route 9. /book: Path route that takes input from the user for the user's favourite genre and book <br />
 Route 10. /hometown: Path route that takes input from the user for the user's hometown and high school <br />
+
+
+How to run:
+1.Download or clone the git repository. <br />
+2.Open the project with pycharm(or another text editor). <br />
+3.Install uvicorn and fastapi with pip. <br />
+4.In the terminal enter: uvicorn main:app --port 8080 --reload <br />
+5.Open your browser and go to: http://localhost:8080/docs to see all routes with fastapi <br />
+
