@@ -45,7 +45,7 @@ class CarMakeModel(BaseModel):
     model: int
     year: int
 
-@app.get("/car")
+@app.post("/car")
 async def car(input: CarMakeModel):
     return f"You have a {input.make} {input.model} from {input.year}."
 
