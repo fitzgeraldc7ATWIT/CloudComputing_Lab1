@@ -22,3 +22,13 @@ How to run: <br />
 5.Open your browser and go to: http://localhost:8080/docs to see all routes with fastapi <br />
 
 
+# CloudComputing_Lab2
+Creating a Python Command Line Driver Program that accesses all route services <br/>
+Using Python unittest library create unit tests for all of your routes <br/>
+Add routes that contain: Header parameters, Cookie Parameters <br/>
+Add routes to Command Line Driver<br/>
+
+Added Header and Cookie parameters aswell as routes and unittests for those two new routes<br/>
+Added Unittests for previous routes<br/>
+
+
