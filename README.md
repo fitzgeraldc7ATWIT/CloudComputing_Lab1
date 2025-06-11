@@ -31,4 +31,10 @@ Add routes to Command Line Driver<br/>
 Added Header and Cookie parameters aswell as routes and unittests for those two new routes<br/>
 Added Unittests for previous routes<br/>
 
-
+How to run:
+1.Download or clone the git repository.
+2.Open the project with pycharm(or another text editor).
+3.Install uvicorn and fastapi with pip.
+4.In the terminal enter: uvicorn main:app --port 8080 --reload
+5.Run the Python Command Line Driver Program in your ide or text editor<br/>
+6.Run the Unit tests by running the "httpRequestTests.py" in your ide<br/>
