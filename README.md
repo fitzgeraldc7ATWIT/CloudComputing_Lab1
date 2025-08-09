@@ -66,7 +66,8 @@ Remote Access into your container<br/>
 How to run: <br/>
 1.Download or clone the git repository. <br/>
 2.Open the project with pycharm(or another text editor). <br/>
-3.<br/>
-4.<br/>
-5.<br/>
-6.<br/>
+3.Navigate to the Lab4 folder using "cd Lab4/" in the terminal<br/>
+4.In the terminal build the docker container using "docker compose up --build"<br/>
+5.Visit "http://localhost:8080" to reach the fastapi container, do "http://localhost:8080/docs" to see all available routes<br/>
+6.Remote access into the container by opening a new terminal, navigating again to the Lab4 folder("cd Lab4/", then entering "docker compose exec lab4 sh
+"<br/>
