@@ -53,3 +53,20 @@ How to run: <br/>
 1.Download or clone the git repository. <br />
 2.Open the project with pycharm(or another text editor). <br />
 3.Install express<br />
+4.Navigate to the Lab3 folder using "cd Lab3/" in the terminal <br/>
+5.Run the NodeJS service by typing "node lab3Main.js"<br/>
+6.Change the route URL based on the routes shown in the Lab3/Lab3Main.js file<br/>
+
+
+# CloudComputing_Lab3 <br/>
+Containerize your FastAPI Service<br/>
+Remote Access into your container<br/>
+<br/>
+
+How to run: <br/>
+1.Download or clone the git repository. <br/>
+2.Open the project with pycharm(or another text editor). <br/>
+3.<br/>
+4.<br/>
+5.<br/>
+6.<br/>
