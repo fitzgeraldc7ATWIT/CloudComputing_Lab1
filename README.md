@@ -38,3 +38,18 @@ How to run: <br />
 4.In the terminal enter: uvicorn main:app --port 8080 --reload <br />
 5.Run the Python Command Line Driver Program in your ide or text editor <br />
 6.Run the Unit tests by running the "httpRequestTests.py" in your ide <br />
+
+
+# CloudComputing_Lab3 <br/>
+Creating a NODEJS Service using Express <br/>
+Created 10 routes with: <br />
+-A minimum of 5 routes should return HTML content <br/>
+-A minimum of 5 routes should have query parameters <br/>
+-A minimum of 1 route should have header parameters <br/>
+-A minimum of 1 route should have body inputs <br/>
+<br/>
+
+How to run: <br/>
+1.Download or clone the git repository. <br />
+2.Open the project with pycharm(or another text editor). <br />
+3.Install express<br />
