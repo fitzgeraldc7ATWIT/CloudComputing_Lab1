@@ -71,3 +71,30 @@ How to run: <br/>
 5.Visit "http://localhost:8080" to reach the fastapi container, do "http://localhost:8080/docs" to see all available routes<br/>
 6.Remote access into the container by opening a new terminal, navigating again to the Lab4 folder("cd Lab4/", then entering "docker compose exec lab4 sh
 "<br/>
+
+# CloudComputing_Lab5 <br/>
+Create the Guitar Database<br/>
+
+Using the provided .sql file<br/>
+
+Create the tables<br/>
+
+Load the data<br/>
+
+Develop 10 Queries:<br/>
+
+Simple Single Table Queries<br/>
+
+At least 5 Queries with Inner Joins<br/>
+
+At least 5 Queries with functions or Group By clauses<br/>
+
+How to run: <br/>
+1.Install mySQL using "brew install mysql". <br/>
+2.Login to mysql and create a password through the terminal using mysql -u root -p".  <br/>
+3.Create the database while in mysql, "CREATE DATABASE my_guitar_shop;
+USE my_guitar_shop;" and quit mysql after using "quit<br/>
+4.In the terminal use this command to create the sql database from the guitar shop file, "mysql -u root -p my_guitar_shop < ~/createguitar.sql", make sure the directory is correct.<br/>
+5.Open Dbeaver and add the new database connection using mySQL and fill in the required information and press finish<br/>
+6.Add a the SQL script of the queries by right clicking the database, selecting SQL editor, then open sql script and use the Lab5Query script that you can download from the lab5 folder in this repo<br/>
+7.Execute the SQL script. <br/>
