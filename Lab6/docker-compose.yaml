@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: guitar-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword  # change to a strong password
+      MYSQL_DATABASE: my_guitar_shop
+      MYSQL_USER: guitaruser
+      MYSQL_PASSWORD: guitarpass123
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./lab5:/docker-entrypoint-initdb.d
+
