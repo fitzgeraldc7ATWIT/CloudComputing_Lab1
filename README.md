@@ -111,5 +111,6 @@ USE my_guitar_shop;" and quit mysql after using "quit<br/>
 4.In the terminal use this command to create the sql database from the guitar shop file, "mysql -u root -p my_guitar_shop < ~/createguitar.sql", make sure the directory is correct.<br/>
 5.Run the container from your pycharm terminal by moving to the lab6 folder, "cd Lab6" then "docker-compose up -d   "<br/>
 5.Open Dbeaver and add the new database connection using mySQL and fill in the required information and press finish<br/>
+5.5.For user and password, use "root", and "password"<br/>
 6.Add a the SQL script of the queries by right clicking the database, selecting SQL editor, then open sql script and use the Lab5Query script that you can download from the lab5 folder in this repo<br/>
 7.Execute the SQL script. <br/>
