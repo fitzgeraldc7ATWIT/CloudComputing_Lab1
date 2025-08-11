@@ -15,7 +15,6 @@ def test_minio():
         endpoint_url='http://localhost:9000',
         aws_access_key_id='minioadmin',
         aws_secret_access_key='minioadmin123',
-        region_name='us-east-1'
     )
     try:
         s3.create_bucket(Bucket="lab8")
@@ -44,7 +43,7 @@ def test_email():
     msg["Subject"] = "test"
 
     try:
-        with smtplib.SMTP("localhost", 1025) as server:  # MailHog SMTP port
+        with smtplib.SMTP("localhost", 1025) as server:
             server.sendmail("test@example.com", ["rec_test@example.com"], msg.as_string())
         print("email sent")
     except Exception as e:
