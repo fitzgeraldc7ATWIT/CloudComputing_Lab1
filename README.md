@@ -114,3 +114,38 @@ USE my_guitar_shop;" and quit mysql after using "quit<br/>
 5.5.For user and password, use "root", and "password"<br/>
 6.Add a the SQL script of the queries by right clicking the database, selecting SQL editor, then open sql script and use the Lab5Query script that you can download from the lab5 folder in this repo<br/>
 7.Execute the SQL script. <br/>
+
+# CloudComputing_Lab7 <br/>
+Implement your queries in Python<br/>
+
+Add Options to your Python Command Line Driver to Execute your queries and display the results<br/>
+
+Augment your unittests to cover your new functionality<br/>
+
+How to run: <br/>
+1.Download or clone the git repository. <br/>
+2.Open the project with pycharm(or another text editor), and ensure docker is open. <br/>
+3.Navigate to the Lab7 folder using "cd Lab7/" in the terminal<br/>
+4.In the terminal build the docker container using "docker compose up --build"<br/>
+5.Open a new terminal and and enter "python cli.py".<br/>
+6.Enter in the terminal the query that you would like to try out, e.g. "q3" or any "q#" up to 15.<br/>
+
+# CloudComputing_Lab8 <br/>
+Local Cloud Services<br/>
+
+Using Docker Compose Implement a Shared File System using MinIO<br/>
+
+Using Docker Compose Implement an Email Server using Postfix<br/>
+
+Using Docker Compose Implement Shared Memory using Redis<br/>
+
+Using your Python Command Line Driver Demonstrate that you can programmatically access all of these services<br/>
+
+How to run: <br/>
+1.Download or clone the git repository. <br/>
+2.Open the project with pycharm(or another text editor), and ensure docker is open. <br/>
+3.Navigate to the Lab8 folder using "cd Lab8/" in the terminal<br/>
+4.In the terminal build the docker container using "docker compose up --build"<br/>
+5.Open a new terminal and and enter "python lab8.py".<br/>
+6.Click on the links to access the MinIO UI and Mailhog email UI.<br/>
+
