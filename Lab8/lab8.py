@@ -1,10 +1,15 @@
+from email.mime.text import MIMEText
+
 import boto3
 import redis
 import smtplib
 from email.message import EmailMessage
 
-def l8_minio():
-    print("Connecting to MinIO...")
+def test_minio():
+    print("MinIO Web UI: http://localhost:9001")
+    print("MinIO User: minioadmin")
+    print("MinIO password: minioadmin123")
+
     s3 = boto3.client(
         's3',
         endpoint_url='http://localhost:9000',
@@ -12,44 +17,40 @@ def l8_minio():
         aws_secret_access_key='minioadmin123',
         region_name='us-east-1'
     )
-
-    bucket = s3.Bucket('lab8')
-    file_content = "lab8_test"
-    filename = 'test.txt'
-
-
     try:
-        s3.create_bucket(Bucket=bucket)
+        s3.create_bucket(Bucket="lab8")
     except s3.exceptions.BucketAlreadyOwnedByYou:
         pass
     except s3.exceptions.BucketAlreadyExists:
         pass
 
-    s3.put_object(Bucket=bucket, Key=filename, Body=file_content)
-    obj = s3.get_object(Bucket=bucket, Key=filename)
-    data = obj['Body'].read().decode()
-    print("MinIO file content:", data)
+    s3.put_object(Bucket="lab8", Key="test_lab8", Body="test")
 
-def l8_redis():
-    print("Connecting to Redis...")
+def test_redis():
+    print("Redis:")
     r = redis.Redis(host='localhost', port=6379, db=0)
-    r.set('lab8_key', 'redis is working!')
-    val = r.get('lab8_key').decode()
-    print("Redis stored value:", val)
+    r.set('mykey', 'Hello World')
+    val = r.get('mykey').decode()
+    print("Redis mykey:", val)
 
-def l8_email():
-    print("Sending email via MailHog...")
-    msg = EmailMessage()
-    msg['Subject'] = 'Lab 8 Test'
-    msg['From'] = 'test@example.com'
-    msg['To'] = 'student@example.com'
-    msg.set_content('This is a test email from Lab 8.')
+def test_email():
+    print("Email Server:")
+    print("http://localhost:8025/")
 
-    with smtplib.SMTP('localhost', 1025) as smtp:
-        smtp.send_message(msg)
-    print("Email sent! View it at http://localhost:8025")
+    body = "Test email for Lab8."
+    msg = MIMEText(body)
+    msg["From"] = "test@example.com"
+    msg["To"] = "recipient@example.com"
+    msg["Subject"] = "test"
+
+    try:
+        with smtplib.SMTP("localhost", 1025) as server:  # MailHog SMTP port
+            server.sendmail("test@example.com", ["rec_test@example.com"], msg.as_string())
+        print("email sent")
+    except Exception as e:
+        print(f"email failed to send", e)
 
 if __name__ == '__main__':
-    l8_minio()
-    l8_redis()
-    l8_email()
+    test_minio()
+    test_email()
+    test_redis()

@@ -1,0 +1,51 @@
+services:
+# Redis (shared memory)
+  redis:
+    image: redis:7
+    ports:
+      - '6379:6379'
+    networks:
+      - cloudnet
+
+  # Postfix (email server)
+  postfix:
+    build: ./postfix
+    container_name: postfix
+    hostname: mail.local
+    depends_on:
+      - mailhog
+    networks:
+      - mailnet
+
+  mailhog:
+    image: mailhog/mailhog
+    container_name: mailhog
+    ports:
+      - "8025:8025" # Web UI
+      - "1025:1025" # SMTP
+    networks:
+      - mailnet
+
+  # MinIO (shared file system)
+  minio:
+    image: minio/minio
+    ports:
+      - "9000:9000"
+      - "9001:9001"   # Web UI port
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin123
+    command: server /data --console-address ":9001"
+    volumes:
+      - miniodata:/data
+
+    networks:
+      - cloudnet
+
+networks:
+  mailnet:
+  cloudnet:
+    driver: bridge
+
+volumes:
+  miniodata:
